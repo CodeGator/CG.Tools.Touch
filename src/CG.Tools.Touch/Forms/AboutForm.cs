@@ -28,7 +28,7 @@ public partial class AboutForm : Form
     // *******************************************************************
 
     #region Protected methods
-    
+
     /// <summary>
     /// This method is called to load the form.
     /// </summary>
@@ -48,6 +48,32 @@ public partial class AboutForm : Form
 
         // Give the base class a chance.
         base.OnLoad(e);
+    }
+
+    #endregion
+
+    // *******************************************************************
+    // Private methods.
+    // *******************************************************************
+
+    #region Private methods
+
+    /// <summary>
+    /// This method handles the link click event.
+    /// </summary>
+    /// <param name="sender">The event sender</param>
+    /// <param name="e">The event arguments</param>
+    private void linkLabel1_LinkClicked(
+        object sender, 
+        LinkLabelLinkClickedEventArgs e
+        )
+    {
+        Process.Start(
+            new ProcessStartInfo("https://github.com/codegator/CG.Tools.Touch")
+            {
+                UseShellExecute = true,
+                Verb = "open"
+            }); 
     }
 
     #endregion

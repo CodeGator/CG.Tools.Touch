@@ -36,6 +36,7 @@ namespace CG.Tools.Touch.Forms
             label3 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -71,7 +72,7 @@ namespace CG.Tools.Touch.Forms
             // button1
             // 
             button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(149, 205);
+            button1.Location = new Point(149, 239);
             button1.Name = "button1";
             button1.Size = new Size(94, 34);
             button1.TabIndex = 4;
@@ -88,12 +89,24 @@ namespace CG.Tools.Touch.Forms
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(70, 210);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(252, 15);
+            linkLabel1.TabIndex = 6;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "https://github.com/codegator.CG.Tools.Touch";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // AboutForm
             // 
             AcceptButton = button1;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(392, 250);
+            ClientSize = new Size(392, 285);
+            Controls.Add(linkLabel1);
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(label3);
@@ -108,6 +121,7 @@ namespace CG.Tools.Touch.Forms
             Text = "About Touch";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -117,5 +131,6 @@ namespace CG.Tools.Touch.Forms
         private Label label3;
         private Button button1;
         private PictureBox pictureBox1;
+        private LinkLabel linkLabel1;
     }
 }

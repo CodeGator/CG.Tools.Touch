@@ -3,3 +3,4 @@ global using System.Reflection;
 global using CG.Tools.Touch.Extensions;
 global using System.Runtime.InteropServices;
 global using System.Text;
+global using System.Diagnostics;
